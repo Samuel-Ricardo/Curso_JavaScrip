@@ -33,3 +33,72 @@ div{
     text-indent: 100px;
 
 }
+
+#paragraph_1{
+
+    font-size: 20px ;
+
+}
+
+.title_1{
+
+    font-size: 40px;
+    color: brown;
+
+}
+
+a:link{
+
+    font: 20px arial;
+    color: cyan;
+}
+
+a:visited{
+    
+    font: 20px arial;
+    color: blue;
+}
+
+a:hover{
+
+    font: 24px arial;
+    color: cyan;
+
+}
+
+a:active{
+
+    font: 18px arial;
+    color: rgba(0, 225, 255, 0.555);
+}
+
+a:focus{
+
+    border-width: 5;
+    border-color: blueviolet;
+
+}
+
+li:first-child{
+
+    font-size: 26px;
+    color: red;
+}
+
+li:last-child{
+
+    font-size: 20;
+    color: rgb(150, 2, 2);
+}
+
+li:nth-child(2){
+
+    font-size: 16px;
+    color: rgb(255, 96, 96);
+}
+
+li:nth-last-child(2){
+
+    font-size: 16px;
+    color: rgb(255, 196, 100);
+}
