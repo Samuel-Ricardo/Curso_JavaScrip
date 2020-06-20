@@ -1,0 +1,28 @@
+#container{
+
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+    border: 2px solid #ff0000;
+    margin: 30px;
+    box-sizing: border-box;
+    top: 100px;
+    left: 200px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+
+}
+
+spam{
+    background-color: red;
+    display: block;
+}
+
+li{
+    background-color: black;
+    color: white;
+    border:  2px solid white;
+    padding: 30px;
+    display: inline-block;
+}
