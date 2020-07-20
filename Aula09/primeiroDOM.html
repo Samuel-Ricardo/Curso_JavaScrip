@@ -35,7 +35,7 @@
 
         </div>
 
-        <div>
+        <div id = "outroDiv">
             <p>
                 <ol>
 
@@ -55,13 +55,19 @@
          * Mostra o navegador
          *
          *  window.document.writeln(window.navigator.appName)
-         * */ 
-
-         //seleciona o Primeiro parágrafo
-           var p1 = window.document.getElementsByTagName('p')[0] ;
-
-           window.document.write("VC clicou aki -,- : "+p1.innerHTML); //vem com o html
-
+         *  
+         *
+         * //seleciona o Primeiro parágrafo
+         *  var p1 = window.document.getElementsByTagName('p')[0] ;
+         *
+         * window.document.write("VC clicou aki -,- : "+p1.innerHTML); //vem com o html
+         *   
+         * //seleciona por id
+         * var p1 = window.document.getElementById("outroDiv") ;
+         *
+         * window.document.write("VC clicou aki -,- : "+p1.innerHTML); //vem com o html
+         */   
+        
         </script>
 
     </body>
