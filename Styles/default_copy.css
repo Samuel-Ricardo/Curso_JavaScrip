@@ -1,0 +1,104 @@
+div{
+
+    /*
+
+    background-color: chartreuse;
+    background-color: #FFFFFF;
+    background-color: rgb( 20%, 60%, 50%);
+    background-color: rgba( 20%, 60%, 50%, 0.5);
+    background-color: hsla(120, 100% , 50%, 1);
+    background-image: url(/Images/paladino.jpg);
+    background-repeat: repeat;
+    background-position: center; */
+    /*background-position: 50% 30px;*/
+
+   /* background: lawngreen url(/Images/paladino.jpg) repeat center; */
+    
+   /* font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: italic;
+    font-variant: small-caps;
+
+    line-height: 60px; 
+
+    font: 20px Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;*/
+    
+    font: bold italic small-caps 20px/60px Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+
+    color: black;
+    text-align: justify;
+    text-transform: capitalize;
+    text-decoration: underline overline;
+    text-indent: 100px;
+
+}
+
+#paragraph_1{
+
+    font-size: 20px ;
+
+}
+
+.title_1{
+
+    font-size: 40px;
+    color: brown;
+
+}
+
+a:link{
+
+    font: 20px arial;
+    color: cyan;
+}
+
+a:visited{
+    
+    font: 20px arial;
+    color: blue;
+}
+
+a:hover{
+
+    font: 24px arial;
+    color: cyan;
+
+}
+
+a:active{
+
+    font: 18px arial;
+    color: rgba(0, 225, 255, 0.555);
+}
+
+a:focus{
+
+    border-width: 5;
+    border-color: blueviolet;
+
+}
+
+li:first-child{
+
+    font-size: 26px;
+    color: red;
+}
+
+li:last-child{
+
+    font-size: 20;
+    color: rgb(150, 2, 2);
+}
+
+li:nth-child(2){
+
+    font-size: 16px;
+    color: rgb(255, 96, 96);
+}
+
+li:nth-last-child(2){
+
+    font-size: 16px;
+    color: rgb(255, 196, 100);
+}
