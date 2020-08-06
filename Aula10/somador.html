@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            
+            <title>Somador</title>
+
+        </head>
+
+        <body>
+            <div>
+                <h1>Somando Valores</h1>
+
+                <input type="number" name="num1" id="num1">
+
+                <input type="number" name="num2" id="num2">
+                <input type="button" value="somar" onclick="somar()">
+             </div>
+
+            <div id="result"> O resultado é:  </div>
+
+
+            <script>
+
+                var inpNum1 = document.getElementById("num1");
+                var inpNum2 = document.getElementById("num2")
+                var result = document.getElementById("result") 
+
+
+                function somar(){
+
+                    var num1 = Number(inpNum1.value)
+                    var num2 = Number(inpNum2.value)
+
+                    var soma = num1 + num2;
+                    
+                    result.innerText = "O resultado da soma entre "+num1+" e "+num2+" é: "+soma
+
+                }
+
+            </script>
+
+        </body>
+    </html>
