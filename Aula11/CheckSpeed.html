@@ -16,30 +16,34 @@
             <h1>Sistema de Multas</h1>
         </div>
         
-        <div id="result">
+        <div>
 
-          Velocidade do carro:  <input type="number" name = "speed" id = "speed">
+          Velocidade do carro:  <input type="number" name = "speed" id = "speed"> km/h
 
-          <input type="button" value= "Checar" id="btnResut">
+          <input type="button" value= "Checar" onclick="checkSpeed()">
 
         </div>
 
+        <div id="result"> Resuklt </div>
 
         <script>
-
-            var speed = window.document.querySelector('input#speed'); 
-
-            var result = document.getElementById("result"); 
+            
 
             function checkSpeed(){
 
+                var txtSpeed = window.document.querySelector('input#speed'); 
+
+                var resul = document.querySelector("div#result"); 
+
+                var speed = Number(txtSpeed.value)  
+
                 if(speed > 60){
 
-                    result.innerText = "Sua velocidade estava "+speed - 60+" a mais do que o permitido";
+                    resul.innerHTML = `<p>Sua velocidade estava <strong> ${speed - 60} km/h </strong> a mais do que o permitido</p>`;
 
                 }else{
 
-                    result.innerText = "Sua velocidade estava "+60 - speed+" a abaixo do permitido";
+                    resul.innerHTML = ` <p> Sua velocidade estava <strong> ${speed - 60} km/h </strong> a abaixo do permitido </p>`
                 }
             }
         </script>
