@@ -27,3 +27,11 @@ footer{
     text-align: center;
     font-style: italic;
 }
+
+img{
+
+    width: 200px;
+    height: 220px;
+
+    border-radius: 100%;
+}
