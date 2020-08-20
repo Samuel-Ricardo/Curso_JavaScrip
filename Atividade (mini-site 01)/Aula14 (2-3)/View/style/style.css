@@ -28,6 +28,13 @@ footer{
     font-style: italic;
 }
 
+div{
+
+    text-align: center;
+    padding: 5px;
+
+}
+
 img{
 
     width: 200px;
