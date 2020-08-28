@@ -10,13 +10,14 @@ function startCount(){
     var interval = Number(intervalInput.value)
     var final = Number(finalInput.value)
 
+    var count = "contando"
+
     result.innerText = `contando:`
 
-    for(var cont; cont != final; cont++){
+    for(start; start != final; start++){
 
-        result.innerText = ` ${cont}`
-
+        count = count + `👍 ${start} `
     }
 
-    
+    result.innerHTML = count
 }
