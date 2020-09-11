@@ -12,17 +12,29 @@ function startCount(){
     
     if(check() === true){
 
-        
-
-        var count = "contando"
+        var count;
 
         result.innerText = `contando:`
 
         if(start>final){
-            increasing(start, final)
+
+            for(start; start != final; start++){
+
+                //    count = count + `👍 ${start} \u{1f449} `
+        
+                     count = count + ` ${start} \u{1f449} `
+                }
+
         }else{
-            decreasing(start, final)
-        }
+
+            for(start; start != final; start--){
+
+                //    count = count + `👍 ${start} \u{1f449} `
+        
+                     count = count + ` ${start} \u{1f449} `
+                }
+        
+            }
 
         count = count + `\u{1f3c1} ${final} `
 
@@ -32,6 +44,8 @@ function startCount(){
 
 function increasing(start, final){
 
+    var count = ""
+
     for(start; start != final; start++){
 
         //    count = count + `👍 ${start} \u{1f449} `
@@ -39,9 +53,12 @@ function increasing(start, final){
              count = count + ` ${start} \u{1f449} `
         }
 
+        return count;
 }
 
 function decreasing(start, final){
+
+    var count = ""
 
     for(start; start != final; start--){
 
@@ -50,6 +67,7 @@ function decreasing(start, final){
              count = count + ` ${start} \u{1f449} `
         }
 
+        return count;
 }
 
 function check(){
@@ -82,5 +100,4 @@ function check(){
          return true
      }
 
-     
-}
+    }
