@@ -18,22 +18,24 @@ function startCount(){
 
         if(start < final){
 
-            for(start; start != final; start++){
+           // for(start; start != final; start++){
 
                 //    count = count + `👍 ${start} \u{1f449} `
         
-                     count = count + ` ${start} \u{1f449} `
-                }
+             //        count = count + ` ${start} \u{1f449} `
+             //   }
+
+             count =   increasing(start,final)
 
         }else{
 
-            for(start; start != final; start--){
+            //for(start; start != final; start--){
 
                 //    count = count + `👍 ${start} \u{1f449} `
         
-                     count = count + ` ${start} \u{1f449} `
-                }
-        
+             //        count = count + ` ${start} \u{1f449} `
+              //  }
+              count =   decreasing(start,final)
             }
 
         count = count + `\u{1f3c1} ${final} `
