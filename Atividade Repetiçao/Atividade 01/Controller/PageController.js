@@ -18,13 +18,38 @@ function startCount(){
 
         result.innerText = `contando:`
 
-        for(start; start != final; start++){
-
-            count = count + `👍 ${start} `
+        if(start>final){
+            increasing(start, final)
+        }else{
+            decreasing(start, final)
         }
+
+        count = count + `\u{1f3c1} ${final} `
 
         result.innerHTML  = count
     }
+}
+
+function increasing(start, final){
+
+    for(start; start != final; start++){
+
+        //    count = count + `👍 ${start} \u{1f449} `
+
+             count = count + ` ${start} \u{1f449} `
+        }
+
+}
+
+function decreasing(start, final){
+
+    for(start; start != final; start--){
+
+        //    count = count + `👍 ${start} \u{1f449} `
+
+             count = count + ` ${start} \u{1f449} `
+        }
+
 }
 
 function check(){
