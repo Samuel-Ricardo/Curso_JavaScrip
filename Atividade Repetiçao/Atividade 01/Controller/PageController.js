@@ -12,11 +12,11 @@ function startCount(){
     
     if(check() === true){
 
-        var count;
+        var count = "";
 
         result.innerText = `contando:`
 
-        if(start>final){
+        if(start < final){
 
             for(start; start != final; start++){
 
