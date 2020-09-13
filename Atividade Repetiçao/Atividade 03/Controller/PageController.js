@@ -4,14 +4,36 @@ function addNumber(){
     var tabNumbers = document.getElementById("tabNumbers");
     
     var number = Number(txtNumber.value)
-    var numbers =  numbers[0]
+    var numbers = [``]
 
-    if(isValid(number)){
+    if(isValid(txtNumber)){
 
-        numbers.addNumber(number)
+        numbers.push(`o numero ${number} foi adicionado`)
+
+        var item = document.createElement(`option`)
+
+        tabNumbers.appendChild(item)
+
+        item.Value = ``
+
     }else{
 
         window.alert(`Numero invalido`)
     }
 
+}
+
+function isValid(txtNumber){
+
+    //var txtNumber = document.querySelector("input#number");
+
+    if(txtNumber.value.length === 0){
+
+        return false
+    }else if(txtNumber.value == 0){
+
+        return false
+    }else{
+        return true
+    }
 }
