@@ -1,14 +1,19 @@
+
+var numbers = []
+
 function addNumber(){
 
     var txtNumber = document.querySelector("input#number");
     var tabNumbers = document.getElementById("tabNumbers");
     
     var number = Number(txtNumber.value)
-    var numbers = []
+
 
     if(isValid(txtNumber) ){
 
         numbers.push(`o numero ${number} foi adicionado`)
+
+        txtNumber.innerHTML = ``
 
         for (var cont = 0; cont < numbers.length; cont++) {
 
@@ -38,15 +43,33 @@ function addNumber(){
 
 function isValid(txtNumber){
 
-    //var txtNumber = document.querySelector("input#number");
+    var number = Number(txtNumber.value)
 
-    if(txtNumber.value.length === 0){
+  //  number === numbers.
+
+    if(txtNumber.value.length === 0 || txtNumber.value == 0){
 
         return false
-    }else if(txtNumber.value == 0){
+    }else if(number < 1 || number > 100){
 
         return false
-    }else{
+    }else if(isValid(number)){
         return true
     }
+}
+
+function isValid(number){
+
+    numbers.forEach(num => {
+        
+        if (number === num){
+            
+            return false
+        }else{
+
+            return true
+        }
+
+    });
+
 }
