@@ -10,11 +10,21 @@ function addNumber(){
 
         numbers.push(`o numero ${number} foi adicionado`)
 
-        var item = document.createElement(`option`)
+        tabNumbers.innerHTML = ``
 
-        tabNumbers.appendChild(item)
+        numbers.forEach(num => {
 
-        item.Value = ``
+            var item = document.createElement(`option`)
+            
+            item.text = numbers
+
+            tabNumbers.appendChild(item)
+
+           // item.value = `item ${num}`
+
+        });
+
+        
 
     }else{
 
