@@ -4,25 +4,28 @@ function addNumber(){
     var tabNumbers = document.getElementById("tabNumbers");
     
     var number = Number(txtNumber.value)
-    var numbers = [``]
+    var numbers = []
 
-    if(isValid(txtNumber)){
+    if(isValid(txtNumber) ){
 
         numbers.push(`o numero ${number} foi adicionado`)
 
-        tabNumbers.innerHTML = ``
-
-        numbers.forEach(num => {
+        for (var cont = 0; cont < numbers.length; cont++) {
 
             var item = document.createElement(`option`)
             
-            item.text = numbers
+            item.text = numbers[cont]
 
-            tabNumbers.appendChild(item)
+            tabNumbers.appendChild(item)           
+        }
+
+     //   numbers.forEach(num => {
+
+           
 
            // item.value = `item ${num}`
 
-        });
+     //   });
 
         
 
