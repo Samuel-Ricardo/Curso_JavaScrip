@@ -1,7 +1,7 @@
 function gerarTabuada(){
 
     var txtNumber = document.querySelector("input#number")
-    var btn = document.getElementById("tabuada")
+    var tabuada = document.getElementById("tabuada")
 
     var numer = Number(txtNumber.value)
 
@@ -15,7 +15,9 @@ function gerarTabuada(){
 
             item.text = `${number} x ${cont} = ${number*cont}`
 
+            tabuada.appendChild(item)
 
+            cont++
         }
 
     }else{
