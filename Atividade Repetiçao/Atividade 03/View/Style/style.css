@@ -1,0 +1,38 @@
+body{
+
+    background-color: aqua;
+    font: normal 15pt Arial;
+
+}
+
+header{
+
+    color: black;
+    text-align: center;
+
+}
+
+section{
+
+    background-color: white;
+    border-radius: 15pt;
+    padding: 20pt;
+    width: 500pt;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+
+}
+
+footer{
+
+    color: black;
+    text-align: center;
+    font-style: italic;
+
+}
+
+div{
+
+    padding: 5px;
+
+}
