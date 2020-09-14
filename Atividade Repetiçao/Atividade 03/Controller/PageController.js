@@ -9,30 +9,20 @@ function addNumber(){
     var number = Number(txtNumber.value)
 
 
-    if(isValid(txtNumber) ){
+    if(isValid(txtNumber) && isValid(number)){
 
-        numbers.push(`o numero ${number} foi adicionado`)
+        numbers.push(number)
 
-        txtNumber.innerHTML = ``
+        tabNumbers.innerHTML = ``
 
         for (var cont = 0; cont < numbers.length; cont++) {
 
             var item = document.createElement(`option`)
             
-            item.text = numbers[cont]
+            item.text = `o numero ${numbers[cont]} foi adicionado`
 
             tabNumbers.appendChild(item)           
-        }
-
-     //   numbers.forEach(num => {
-
-           
-
-           // item.value = `item ${num}`
-
-     //   });
-
-        
+        }    
 
     }else{
 
@@ -43,33 +33,35 @@ function addNumber(){
 
 function isValid(txtNumber){
 
-    var number = Number(txtNumber.value)
-
-  //  number === numbers.
-
     if(txtNumber.value.length === 0 || txtNumber.value == 0){
 
         return false
     }else if(number < 1 || number > 100){
 
         return false
-    }else if(isValid(number)){
-        return true
-    }
+    }else{
+       return true
+   }
 }
 
 function isValid(number){
 
-    numbers.forEach(num => {
+    if(numbers.length > 0){
+
+        for(var cont = 0; cont < numbers.length; cont++){
         
-        if (number === num){
+        if (number == numbers[cont]){
             
             return false
         }else{
 
             return true
         }
+    }
 
-    });
+}else{
+
+    return true
+}
 
 }
