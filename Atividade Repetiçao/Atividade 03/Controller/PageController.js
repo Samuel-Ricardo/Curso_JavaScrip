@@ -1,6 +1,9 @@
 
 var numbers = []
 
+
+
+
 function addNumber(){
 
     var txtNumber = document.querySelector("input#number");
@@ -14,6 +17,8 @@ function addNumber(){
         numbers.push(number)
 
         tabNumbers.innerHTML = ``
+
+        clearDetails()
 
         for (var cont = 0; cont < numbers.length; cont++) {
 
@@ -30,6 +35,9 @@ function addNumber(){
     }
 
 }
+
+
+
 
 function isValid(txtNumber){
 
@@ -64,4 +72,27 @@ function isValid(number){
     return true
 }
 
+}
+
+
+
+showDetails(){
+
+    var totalNumbers = document.getElementById("totalNumbers")
+
+    if(numbers.length > 0){}
+
+    
+    var bigger = document.getElementById("bigger")
+    var smaller = document.getElementById("smaller")
+    var sum = document.getElementById("sum")
+    var average = document.getElementById("average")
+
+    totalNumbers.innerText = `O total de números é : ${numbers.length}`
+
+}else{
+    window.alert = `A lista está vazia`
+    
+    totalNumbers.innerText = `A lista está vazia`
+}
 }
