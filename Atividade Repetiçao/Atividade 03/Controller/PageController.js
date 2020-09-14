@@ -91,7 +91,7 @@ function showDetails(){
 
         smallerNumber = smaller(numbers)
 
-        smaller = `O maior número é: ${smallerNumber}`
+        smaller = `O maior menor é: ${smallerNumber}`
 
     }else{
         window.alert = `A lista está vazia`
@@ -99,3 +99,23 @@ function showDetails(){
         totalNumbers.innerText = `A lista está vazia`
     }
 }
+
+
+function smaller(numbers){
+
+    var smaller = 0;
+
+    for(var cont = 0; cont > numbers.length; cont++){
+
+        if(numbers[cont] < smaller){
+
+
+            smaller = numbers[cont]
+
+        }
+    }
+
+    return smaller
+}
+
+
