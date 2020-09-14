@@ -76,23 +76,26 @@ function isValid(number){
 
 
 
-showDetails(){
+function showDetails(){
 
     var totalNumbers = document.getElementById("totalNumbers")
 
-    if(numbers.length > 0){}
+    if(numbers.length > 0){
 
-    
-    var bigger = document.getElementById("bigger")
-    var smaller = document.getElementById("smaller")
-    var sum = document.getElementById("sum")
-    var average = document.getElementById("average")
+        var bigger = document.getElementById("bigger")
+        var smaller = document.getElementById("smaller")
+        var sum = document.getElementById("sum")
+        var average = document.getElementById("average")
 
-    totalNumbers.innerText = `O total de números é : ${numbers.length}`
+        totalNumbers.innerText = `O total de números é : ${numbers.length}`
 
-}else{
-    window.alert = `A lista está vazia`
-    
-    totalNumbers.innerText = `A lista está vazia`
-}
+        smallerNumber = smaller(numbers)
+
+        smaller = `O maior número é: ${smallerNumber}`
+
+    }else{
+        window.alert = `A lista está vazia`
+        
+        totalNumbers.innerText = `A lista está vazia`
+    }
 }
