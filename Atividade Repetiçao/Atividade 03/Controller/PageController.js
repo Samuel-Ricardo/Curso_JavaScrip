@@ -163,3 +163,18 @@ function sum(numbers){
 
     return sum
 }
+
+function average(numbers){
+
+    var sum = 0;
+    var average = 0;
+
+    for(var cont = 0; cont > numbers.length; cont++){
+
+       sum += numbers[cont]
+    }
+
+    average = sum/numbers.length
+
+    return average
+}
