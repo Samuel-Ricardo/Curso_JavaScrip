@@ -18,7 +18,7 @@ function addNumber(){
 
         tabNumbers.innerHTML = ``
 
-        clearDetails()
+       // clearDetails()
 
         for (var cont = 0; cont < numbers.length; cont++) {
 
@@ -96,19 +96,19 @@ function showDetails(){
 
         totalNumbers.innerText = `O total de números é : ${numbers.length}`
 
-        smallerNumber = smaller(numbers)
+        smallerNumber = smallerOf(numbers)
 
         smaller = `O menor numero é: ${smallerNumber}`
 
-        biggerNumber = bigger(numbers)
+        biggerNumber = biggerOf(numbers)
 
         bigger = `O maior numero é: ${biggerNumber}`
 
-        sumOfAll = sum(numbers)
+        sumOfAll = sumOf(numbers)
 
         sum = `A soma de todos os números é: ${sumOfAll}`
 
-        average = `A média de todos os números é: ${average(numbers)}`
+        average = `A média de todos os números é: ${averageOf(numbers)}`
 
     }else{
         window.alert = `A lista está vazia`
@@ -118,7 +118,7 @@ function showDetails(){
 }
 
 
-function smaller(numbers){
+function smallerOf(numbers){
 
     var smaller = 0;
 
@@ -135,7 +135,7 @@ function smaller(numbers){
     return smaller
 }
 
-function bigger(numbers){
+function biggerOf(numbers){
 
     var biggers = 0;
 
@@ -152,7 +152,7 @@ function bigger(numbers){
     return biggers
 }
 
-function sum(numbers){
+function sumOf(numbers){
 
     var sum = 0;
 
@@ -164,7 +164,7 @@ function sum(numbers){
     return sum
 }
 
-function average(numbers){
+function averageOf(numbers){
 
     var sum = 0;
     var average = 0;
