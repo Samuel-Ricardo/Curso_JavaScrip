@@ -102,7 +102,13 @@ function showDetails(){
 
         biggerNumber = bigger(numbers)
 
-        smaller = `O maior numero é: ${biggerNumber}`
+        bigger = `O maior numero é: ${biggerNumber}`
+
+        sumOfAll = sum(numbers)
+
+        sum = `A soma de todos os números é: ${sumOfAll}`
+
+        average = `A média de todos os números é: ${average(numbers)}`
 
     }else{
         window.alert = `A lista está vazia`
@@ -146,3 +152,14 @@ function bigger(numbers){
     return biggers
 }
 
+function sum(numbers){
+
+    var sum = 0;
+
+    for(var cont = 0; cont > numbers.length; cont++){
+
+       sum += numbers[cont]
+    }
+
+    return sum
+}
