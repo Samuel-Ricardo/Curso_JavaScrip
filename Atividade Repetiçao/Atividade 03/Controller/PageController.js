@@ -44,15 +44,15 @@ function isValid(txtNumber){
     if(txtNumber.value.length === 0 || txtNumber.value == 0){
 
         return false
-    }else if(number < 1 || number > 100){
-
-        return false
+        
     }else{
        return true
    }
 }
 
 function isValid(number){
+
+    var valid = false
 
     if(numbers.length > 0){
 
@@ -63,9 +63,16 @@ function isValid(number){
             return false
         }else{
 
-            return true
+            valid = true
         }
     }
+
+    if(number < 1 || number > 100){
+
+        valid = false
+    }
+
+    return valid
 
 }else{
 
@@ -91,7 +98,11 @@ function showDetails(){
 
         smallerNumber = smaller(numbers)
 
-        smaller = `O maior menor é: ${smallerNumber}`
+        smaller = `O menor numero é: ${smallerNumber}`
+
+        biggerNumber = bigger(numbers)
+
+        smaller = `O maior numero é: ${biggerNumber}`
 
     }else{
         window.alert = `A lista está vazia`
@@ -118,4 +129,20 @@ function smaller(numbers){
     return smaller
 }
 
+function bigger(numbers){
+
+    var biggers = 0;
+
+    for(var cont = 0; cont > numbers.length; cont++){
+
+        if(numbers[cont] > biggers){
+
+
+            biggers = numbers[cont]
+
+        }
+    }
+
+    return biggers
+}
 
