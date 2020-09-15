@@ -6,6 +6,8 @@ var numbers = []
 
 function addNumber(){
 
+     clearDetails()
+
     var txtNumber = document.querySelector("input#number");
     var tabNumbers = document.getElementById("tabNumbers");
     
@@ -18,7 +20,7 @@ function addNumber(){
 
         tabNumbers.innerHTML = ``
 
-       // clearDetails()
+
 
         for (var cont = 0; cont < numbers.length; cont++) {
 
@@ -96,19 +98,13 @@ function showDetails(){
 
         totalNumbers.innerText = `O total de números é : ${numbers.length}`
 
-        smallerNumber = smallerOf(numbers)
+        smaller.innerText = `O menor numero é: ${smallerOf(numbers)}`
+        
+        bigger.innerText = `O maior numero é: ${biggerOf(numbers)}`
 
-        smaller = `O menor numero é: ${smallerNumber}`
+        sum.innerText = `A soma de todos os números é: ${sumOf(numbers)}`
 
-        biggerNumber = biggerOf(numbers)
-
-        bigger = `O maior numero é: ${biggerNumber}`
-
-        sumOfAll = sumOf(numbers)
-
-        sum = `A soma de todos os números é: ${sumOfAll}`
-
-        average = `A média de todos os números é: ${averageOf(numbers)}`
+        average.innerText = `A média de todos os números é: ${averageOf(numbers)}`
 
     }else{
         window.alert = `A lista está vazia`
@@ -120,9 +116,9 @@ function showDetails(){
 
 function smallerOf(numbers){
 
-    var smaller = 0;
+    var smaller = 200;
 
-    for(var cont = 0; cont > numbers.length; cont++){
+    for(var cont = 0; cont < numbers.length; cont++){
 
         if(numbers[cont] < smaller){
 
@@ -139,7 +135,7 @@ function biggerOf(numbers){
 
     var biggers = 0;
 
-    for(var cont = 0; cont > numbers.length; cont++){
+    for(var cont = 0; cont < numbers.length; cont++){
 
         if(numbers[cont] > biggers){
 
@@ -156,7 +152,7 @@ function sumOf(numbers){
 
     var sum = 0;
 
-    for(var cont = 0; cont > numbers.length; cont++){
+    for(var cont = 0; cont < numbers.length; cont++){
 
        sum += numbers[cont]
     }
@@ -169,7 +165,7 @@ function averageOf(numbers){
     var sum = 0;
     var average = 0;
 
-    for(var cont = 0; cont > numbers.length; cont++){
+    for(var cont = 0; cont < numbers.length; cont++){
 
        sum += numbers[cont]
     }
@@ -177,4 +173,24 @@ function averageOf(numbers){
     average = sum/numbers.length
 
     return average
+}
+
+
+function clearDetails(){
+
+    var bigger = document.getElementById("bigger")
+    var smaller = document.getElementById("smaller")
+    var sum = document.getElementById("sum")
+    var average = document.getElementById("average")
+
+    totalNumbers.innerText =  ``
+
+    smaller.innerText = ``
+    
+    bigger.innerText = ``
+
+    sum.innerText = ``
+
+    average.innerText = ``
+
 }

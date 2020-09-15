@@ -23,7 +23,7 @@
         <section>
 
             <div>
-                Digite um numero de 1 a 100 <input type="number" name="number" id="number">
+                Digite um numero de 1 a 100 <input type="number" name="number" id="number" onclick="clearDetails()">
 
                 <input type="button" value="adicionar numero .-." name="btn" id="btn" onclick="addNumber()">
             </div>
@@ -60,6 +60,10 @@
 
                 <p id = "average">
 
+                </p>
+
+                <p>
+                    <input type="button" value="Limpar" name="clear" id="clear" onclick="clearDetails()">
                 </p>
 
             </div>
