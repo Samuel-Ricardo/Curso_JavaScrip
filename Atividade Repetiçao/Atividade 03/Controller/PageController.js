@@ -176,12 +176,20 @@ function averageOf(numbers){
 }
 
 
+function clearAll(){
+
+    clearDetails()
+    clearTab()
+    clearArray()
+}
+
 function clearDetails(){
 
     var bigger = document.getElementById("bigger")
     var smaller = document.getElementById("smaller")
     var sum = document.getElementById("sum")
     var average = document.getElementById("average")
+    var tabNumbers = document.getElementById("tabNumbers");
 
     totalNumbers.innerText =  ``
 
@@ -193,4 +201,19 @@ function clearDetails(){
 
     average.innerText = ``
 
+}
+
+function clearTab(){
+
+    var tabNumbers = document.getElementById("tabNumbers");
+
+    tabNumbers.innerHTML = ``
+}
+
+function clearArray(){
+
+    while(numbers.length){
+
+        numbers.pop()
+    }
 }
