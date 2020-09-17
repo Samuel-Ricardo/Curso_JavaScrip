@@ -33,7 +33,7 @@ function addNumber(){
 
     }else{
 
-        window.alert(`Numero invalido`)
+        window.alert(`Numero invalido ou já existe`)
     }
 
 }
